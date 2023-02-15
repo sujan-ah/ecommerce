@@ -1,31 +1,9 @@
 const express = require("express");
-const app = express();
 const chalk = require("chalk");
+const userRoute = require("./routes/userRoute");
+const app = express();
 
-app.get("/", function (req, res) {
-  res.json([
-    {
-      name: "shawon",
-    },
-    {
-      name: "sujan",
-    },
-    {
-      name: "muntasir",
-    },
-    {
-      name: "mahmudul",
-    },
-  ]);
-});
-
-app.get("/test", function () {
-  res.json([
-    {
-      msg: "successful try",
-    },
-  ]);
-});
+app.use("/", userRoute);
 
 app.listen(8000, function () {
   console.log(chalk.bgBlue("Port running on 8000 port"));
