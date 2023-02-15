@@ -3,7 +3,20 @@ const app = express();
 const chalk = require("chalk");
 
 app.get("/", function (req, res) {
-  res.send("Hello World asd");
+  res.json([
+    {
+      name: "shawon",
+    },
+    {
+      name: "sujan",
+    },
+    {
+      name: "muntasir",
+    },
+    {
+      name: "mahmudul",
+    },
+  ]);
 });
 
 app.listen(8000, function () {
