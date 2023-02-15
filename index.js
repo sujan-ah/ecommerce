@@ -19,6 +19,14 @@ app.get("/", function (req, res) {
   ]);
 });
 
+app.get("/test", function () {
+  res.json([
+    {
+      msg: "successful try",
+    },
+  ]);
+});
+
 app.listen(8000, function () {
   console.log(chalk.bgBlue("Port running on 8000 port"));
 });
